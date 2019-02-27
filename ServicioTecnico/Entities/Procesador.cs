@@ -8,14 +8,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ServicioTecnico
 {
-    [Table("MotivosCierre")]
-    public class MotivoCierre
+
+    [Table("Procesadores")]
+    public class Procesador
     {
         [Key]
-        public int IdMotivoCierre { get; set; }
+        public int IdProcesador { get; set; }
         public string Descripcion { get; set; }
+        public string Fabricante { get; set; }
         public string EstadoRegistro { get; set; }
 
-        //public virtual ICollection<MotivoCierre> MotivosCierre { get; set; }
+        //public virtual ICollection<Equipo> Equipos { get; set; }
     }
 }
