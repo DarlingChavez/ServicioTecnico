@@ -14,7 +14,7 @@ namespace ServicioTecnico
         [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IdTipoProducto { get; set; }
         public string Descripcion { get; set; }
-        public string Estadoregistro { get; set; }
+        public string EstadoRegistro { get; set; }
 
         //public virtual ICollection<Inventario> Inventario { get; set; }
 

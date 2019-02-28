@@ -16,6 +16,8 @@ namespace ServicioTecnico
         public DbSet<Inventario> Inventarios { get; set; }
         public DbSet<MotivoCierre> Motivos { get; set; }
         public DbSet<TipoProducto> Tipos { get; set; }
+        public DbSet<Marca> Marcas { get; set; }
+        public DbSet<Procesador> Procesadores { get; set; }
 
         public BaseContext() : base("name=defaultconnection")
         {

@@ -37,7 +37,7 @@ namespace ServicioTecnico.Migrations
                 c => new
                     {
                         IdEstado = c.Int(nullable: false),
-                        Nombre = c.String(),
+                        Tipo = c.String(),
                         Descripcion = c.String(),
                         EstadoRegistro = c.String(),
                     })
@@ -120,7 +120,7 @@ namespace ServicioTecnico.Migrations
                     {
                         IdTipoProducto = c.Int(nullable: false),
                         Descripcion = c.String(),
-                        Estadoregistro = c.String(),
+                        EstadoRegistro = c.String(),
                     })
                 .PrimaryKey(t => t.IdTipoProducto);
             
