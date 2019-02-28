@@ -29,6 +29,8 @@ namespace ServicioTecnico.Migrations
 
         private void InsertTiposProducto(ref BaseContext context)
         {
+            context.Database.ExecuteSqlCommand("DELETE FROM [TiposProducto]");
+
             IList<TipoProducto> defaultTipo = new List<TipoProducto>();
 
             defaultTipo.Add(new TipoProducto() { IdTipoProducto = 1, Descripcion = "Sin especificar", EstadoRegistro = "A" });
@@ -40,7 +42,7 @@ namespace ServicioTecnico.Migrations
             defaultTipo.Add(new TipoProducto() { IdTipoProducto = 7, Descripcion = "Pantalla", EstadoRegistro = "A" });
             defaultTipo.Add(new TipoProducto() { IdTipoProducto = 8, Descripcion = "Bateria", EstadoRegistro = "A" });
             defaultTipo.Add(new TipoProducto() { IdTipoProducto = 9, Descripcion = "Cargador", EstadoRegistro = "A" });
-
+            
             context.Tipos.AddRange(defaultTipo);
 
             base.Seed(context);
@@ -49,6 +51,8 @@ namespace ServicioTecnico.Migrations
 
         private void InsertProcesadores(ref BaseContext context)
         {
+            context.Database.ExecuteSqlCommand("DELETE FROM [Procesadores]");
+
             IList<Procesador> defaultProcesador = new List<Procesador>();
 
             defaultProcesador.Add(new Procesador() { IdProcesador = 1, Descripcion = "Sin especificar", Fabricante = "Sin especificar", EstadoRegistro = "A" });
@@ -76,6 +80,8 @@ namespace ServicioTecnico.Migrations
 
         private void InsertMotivosCierre(ref BaseContext context)
         {
+            context.Database.ExecuteSqlCommand("DELETE FROM [MotivosCierre]");
+
             IList<MotivoCierre> defaultMotivo = new List<MotivoCierre>();
 
             defaultMotivo.Add(new MotivoCierre() { IdMotivoCierre = 1, Descripcion = "Recibido", EstadoRegistro = "A" });
@@ -93,6 +99,8 @@ namespace ServicioTecnico.Migrations
 
         private void InsertMarcas(ref BaseContext context)
         {
+            context.Database.ExecuteSqlCommand("DELETE FROM [Marcas]");
+
             IList<Marca> defaultMarca = new List<Marca>();
 
             defaultMarca.Add(new Marca() { IdMarca = 1, Descripcion = "Sin especificar", EstadoRegistro = "A" });
@@ -111,6 +119,8 @@ namespace ServicioTecnico.Migrations
 
         private void InsertEstados(ref BaseContext context)
         {
+            context.Database.ExecuteSqlCommand("DELETE FROM [Estados]");
+
             IList<Estado> defaultEstados = new List<Estado>();
 
             defaultEstados.Add(new Estado() { IdEstado = 1, Descripcion = "Recibido", Tipo="Mantenimiento", EstadoRegistro="A" });
