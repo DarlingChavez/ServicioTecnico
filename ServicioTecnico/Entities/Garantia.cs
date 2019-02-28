@@ -11,7 +11,7 @@ namespace ServicioTecnico
     [Table("Garantias")]
     public class Garantia
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public int IdGarantia { get; set; }
         public byte Indice { get; set; } = 1;
         //[Required]

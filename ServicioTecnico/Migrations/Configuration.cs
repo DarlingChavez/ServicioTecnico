@@ -4,6 +4,7 @@ namespace ServicioTecnico.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using System.Collections.Generic;
 
     internal sealed class Configuration : DbMigrationsConfiguration<ServicioTecnico.BaseContext>
     {
@@ -18,6 +19,10 @@ namespace ServicioTecnico.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+
+            //InsertData();
+
         }
+
     }
 }

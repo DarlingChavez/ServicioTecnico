@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ServicioTecnico
 {
@@ -25,9 +26,28 @@ namespace ServicioTecnico
         {
             //Write Fluent API configurations here
 
+            CrearRelaciones(ref modelBuilder);
+
+            //CrearIndentities(ref modelBuilder);
+
+        }
+
+        //private void CrearIndentities(ref DbModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Equipo>().Property(x => x.IdEquipo).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+        //    modelBuilder.Entity<Garantia>().Property(x => x.IdGarantia).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+        //    modelBuilder.Entity<Inventario>().Property(x => x.IdInventario).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+        //}
+
+        /// <summary>
+        /// Crear las foreign keys
+        /// </summary>
+        /// <param name="modelBuilder"></param>
+        private void CrearRelaciones(ref DbModelBuilder modelBuilder)
+        {
             //relacion equipo - marca
             modelBuilder.Entity<Equipo>()
-            .HasRequired<Marca>(x=>x.Marca)
+            .HasRequired<Marca>(x => x.Marca)
             .WithMany()
             .WillCascadeOnDelete(false);
             //relacion equipo - procesador
@@ -68,6 +88,5 @@ namespace ServicioTecnico
             .WithMany()
             .WillCascadeOnDelete(false);
         }
-
     }
 }

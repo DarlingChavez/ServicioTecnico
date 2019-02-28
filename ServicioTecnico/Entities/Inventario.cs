@@ -11,7 +11,7 @@ namespace ServicioTecnico
     [Table("Inventario")]
     public class Inventario
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public int IdInventario { get; set; }
         public string Descripcion { get; set; }
         //[Required]

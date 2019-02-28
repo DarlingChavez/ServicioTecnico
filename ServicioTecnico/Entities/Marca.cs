@@ -11,7 +11,7 @@ namespace ServicioTecnico
     [Table("Marcas")]
     public class Marca
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IdMarca { get; set; }
         public string Descripcion { get; set; }
         public string EstadoRegistro { get; set; }

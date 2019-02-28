@@ -12,7 +12,7 @@ namespace ServicioTecnico
     [Table("Procesadores")]
     public class Procesador
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IdProcesador { get; set; }
         public string Descripcion { get; set; }
         public string Fabricante { get; set; }

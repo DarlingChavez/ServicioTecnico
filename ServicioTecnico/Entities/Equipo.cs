@@ -11,7 +11,7 @@ namespace ServicioTecnico
     [Table("Equipos")]
     public class Equipo
     {
-        [Key]
+        [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdEquipo { get; set; }
         //[Required]
         //[ForeignKey("Marca")]

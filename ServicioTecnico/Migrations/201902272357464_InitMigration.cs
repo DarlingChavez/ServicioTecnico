@@ -36,7 +36,7 @@ namespace ServicioTecnico.Migrations
                 "dbo.Estados",
                 c => new
                     {
-                        IdEstado = c.Int(nullable: false, identity: true),
+                        IdEstado = c.Int(nullable: false),
                         Nombre = c.String(),
                         Descripcion = c.String(),
                         EstadoRegistro = c.String(),
@@ -47,7 +47,7 @@ namespace ServicioTecnico.Migrations
                 "dbo.Marcas",
                 c => new
                     {
-                        IdMarca = c.Int(nullable: false, identity: true),
+                        IdMarca = c.Int(nullable: false),
                         Descripcion = c.String(),
                         EstadoRegistro = c.String(),
                     })
@@ -57,7 +57,7 @@ namespace ServicioTecnico.Migrations
                 "dbo.MotivosCierre",
                 c => new
                     {
-                        IdMotivoCierre = c.Int(nullable: false, identity: true),
+                        IdMotivoCierre = c.Int(nullable: false),
                         Descripcion = c.String(),
                         EstadoRegistro = c.String(),
                     })
@@ -67,7 +67,7 @@ namespace ServicioTecnico.Migrations
                 "dbo.Procesadores",
                 c => new
                     {
-                        IdProcesador = c.Int(nullable: false, identity: true),
+                        IdProcesador = c.Int(nullable: false),
                         Descripcion = c.String(),
                         Fabricante = c.String(),
                         EstadoRegistro = c.String(),
@@ -78,7 +78,7 @@ namespace ServicioTecnico.Migrations
                 "dbo.Garantias",
                 c => new
                     {
-                        IdGarantia = c.Int(nullable: false, identity: true),
+                        IdGarantia = c.Int(nullable: false),
                         Indice = c.Byte(nullable: false),
                         IdEquipo = c.Int(nullable: false),
                         Descripcion = c.String(),
@@ -96,7 +96,7 @@ namespace ServicioTecnico.Migrations
                 "dbo.Inventario",
                 c => new
                     {
-                        IdInventario = c.Int(nullable: false, identity: true),
+                        IdInventario = c.Int(nullable: false),
                         Descripcion = c.String(),
                         IdTipoProducto = c.Int(nullable: false),
                         Origen = c.String(),
@@ -118,7 +118,7 @@ namespace ServicioTecnico.Migrations
                 "dbo.TiposProducto",
                 c => new
                     {
-                        IdTipoProducto = c.Int(nullable: false, identity: true),
+                        IdTipoProducto = c.Int(nullable: false),
                         Descripcion = c.String(),
                         Estadoregistro = c.String(),
                     })

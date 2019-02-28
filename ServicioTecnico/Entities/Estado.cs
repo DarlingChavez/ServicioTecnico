@@ -11,7 +11,7 @@ namespace ServicioTecnico
     [Table("Estados")]
     public class Estado
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IdEstado { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }

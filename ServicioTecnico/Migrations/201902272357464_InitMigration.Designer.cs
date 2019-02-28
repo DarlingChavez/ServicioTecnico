@@ -13,7 +13,7 @@ namespace ServicioTecnico.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201902271912141_InitMigration"; }
+            get { return "201902272357464_InitMigration"; }
         }
         
         string IMigrationMetadata.Source

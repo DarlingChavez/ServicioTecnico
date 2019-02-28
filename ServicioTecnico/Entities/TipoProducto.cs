@@ -11,7 +11,7 @@ namespace ServicioTecnico
     [Table("TiposProducto")]
     public class TipoProducto
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IdTipoProducto { get; set; }
         public string Descripcion { get; set; }
         public string Estadoregistro { get; set; }

@@ -11,7 +11,7 @@ namespace ServicioTecnico
     [Table("MotivosCierre")]
     public class MotivoCierre
     {
-        [Key]
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IdMotivoCierre { get; set; }
         public string Descripcion { get; set; }
         public string EstadoRegistro { get; set; }
