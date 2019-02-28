@@ -24,6 +24,11 @@ namespace ServicioTecnico
 
         }
 
+        public BaseContext(string connectionString) : base(connectionString)
+        {
+
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //Write Fluent API configurations here

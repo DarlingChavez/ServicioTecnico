@@ -80,9 +80,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\DaoEquipo.cs" />
+    <Compile Include="Data\DaoEstado.cs" />
     <Compile Include="Data\BaseContext.cs" />
+    <Compile Include="Data\BaseRepository.cs" />
+    <Compile Include="Data\DaoGarantia.cs" />
+    <Compile Include="Data\DaoInventario.cs" />
+    <Compile Include="Data\DaoMarca.cs" />
+    <Compile Include="Data\DaoMotivoCierre.cs" />
+    <Compile Include="Data\DaoProcesador.cs" />
+    <Compile Include="Data\DaoTipoProducto.cs" />
     <Compile Include="Entities\Equipo.cs" />
     <Compile Include="Entities\Estado.cs" />
+    <Compile Include="Entities\General.cs" />
     <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
