@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManagerSplash = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ServicioTecnico.SplashScreenMain), true, true);
             this.applicationMenuMain = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.barManagerMain = new DevExpress.XtraBars.BarManager(this.components);
             this.barMain = new DevExpress.XtraBars.Bar();
@@ -47,8 +48,13 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.documentManagerMain = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.tabbedViewMain = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.splashScreenManagerWait = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ServicioTecnico.FrmWaitForm), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenuMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentManagerMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedViewMain)).BeginInit();
             this.SuspendLayout();
             // 
             // applicationMenuMain
@@ -213,6 +219,22 @@
             this.barDockControlRight.Manager = this.barManagerMain;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 414);
             // 
+            // documentManagerMain
+            // 
+            this.documentManagerMain.MdiParent = this;
+            this.documentManagerMain.MenuManager = this.barManagerMain;
+            this.documentManagerMain.View = this.tabbedViewMain;
+            this.documentManagerMain.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
+            this.tabbedViewMain});
+            // 
+            // splashScreenManagerWait
+            // 
+            this.splashScreenManagerWait.ClosingDelay = 500;
+            // 
+            // splashScreenManagerSplash
+            // 
+            splashScreenManagerSplash.ClosingDelay = 500;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +252,8 @@
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenuMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.documentManagerMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedViewMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +279,8 @@
         private DevExpress.XtraBars.BarSubItem barSubItemConsultar;
         private DevExpress.XtraBars.BarSubItem barSubItemAyuda;
         private DevExpress.XtraBars.BarButtonItem barButtonItemAboutMe;
+        private DevExpress.XtraBars.Docking2010.DocumentManager documentManagerMain;
+        private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedViewMain;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManagerWait;
     }
 }

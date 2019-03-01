@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(640, 430);
             this.Name = "FrmSoporte";
             this.Text = "FrmSoporte";
+            this.Load += new System.EventHandler(this.FrmSoporte_Load);
             this.ResumeLayout(false);
 
         }

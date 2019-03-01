@@ -17,5 +17,10 @@ namespace ServicioTecnico
         {
             InitializeComponent();
         }
+
+        private void FrmSoporte_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

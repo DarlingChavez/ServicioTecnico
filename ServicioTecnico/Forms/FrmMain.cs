@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.Skins;
+using DevExpress.XtraSplashScreen;
 
 namespace ServicioTecnico
 {
@@ -50,22 +51,53 @@ namespace ServicioTecnico
 
         private void barButtonItemEquipo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            this.splashScreenManagerWait.ShowWaitForm();
+
+
             bool existe = ExisteHijo(typeof(FrmSoporte));
-            if (existe) return;
+            if (existe)
+            {
+                this.splashScreenManagerWait.CloseWaitForm();
+                return;
+            }
             FrmSoporte frm = new FrmSoporte();
             frm.MdiParent = this;
-            frm.LookAndFeel.UseDefaultLookAndFeel = true;
+            //SplashScreenManager.ShowForm(this, typeof(FrmWaitForm), true, true,false);
+            //SplashScreenManager.Default.SetWaitFormCaption("Cargando..........");
+            //SplashScreenManager.Default.SetWaitFormDescription("Espera..........");
+            //this.splashScreenManagerWait.ShowWaitForm();
             frm.Show();
-        }
+            //this.splashScreenManagerWait.CloseWaitForm();
+            //SplashScreenManager.CloseDefaultWaitForm();
+            //SplashScreenManager.CloseForm();
 
+            this.splashScreenManagerWait.CloseWaitForm();
+        }
+        
         private void barButtonItemInventario_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            this.splashScreenManagerWait.ShowWaitForm();
+
+
             bool existe = ExisteHijo(typeof(FrmMercaderia));
-            if (existe) return;
+            if (existe)
+            {
+                this.splashScreenManagerWait.CloseWaitForm();
+                return;
+            }
             FrmMercaderia frm = new FrmMercaderia();
             frm.MdiParent = this;
-            frm.LookAndFeel.UseDefaultLookAndFeel = true;
+            //SplashScreenManager.ShowForm(this, typeof(FrmWaitForm), true, true, false);
+            //SplashScreenManager.Default.SetWaitFormCaption("Cargando..........");
+            //SplashScreenManager.Default.SetWaitFormDescription("Espera..........");
+            //this.splashScreenManagerWait.ShowWaitForm();
             frm.Show();
+            //this.splashScreenManagerWait.CloseWaitForm();
+            //SplashScreenManager.CloseDefaultWaitForm();
+            //SplashScreenManager.CloseForm();
+
+            this.splashScreenManagerWait.CloseWaitForm();
         }
+        
     }
 }
