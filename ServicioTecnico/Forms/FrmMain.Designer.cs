@@ -57,6 +57,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabbedViewMain)).BeginInit();
             this.SuspendLayout();
             // 
+            // splashScreenManagerSplash
+            // 
+            splashScreenManagerSplash.ClosingDelay = 500;
+            // 
             // applicationMenuMain
             // 
             this.applicationMenuMain.Name = "applicationMenuMain";
@@ -158,6 +162,7 @@
             this.barButtonItemGarantia.Caption = "Garantía";
             this.barButtonItemGarantia.Id = 6;
             this.barButtonItemGarantia.Name = "barButtonItemGarantia";
+            this.barButtonItemGarantia.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemGarantia_ItemClick);
             // 
             // barButtonItemInventario
             // 
@@ -230,10 +235,6 @@
             // splashScreenManagerWait
             // 
             this.splashScreenManagerWait.ClosingDelay = 500;
-            // 
-            // splashScreenManagerSplash
-            // 
-            splashScreenManagerSplash.ClosingDelay = 500;
             // 
             // FrmMain
             // 

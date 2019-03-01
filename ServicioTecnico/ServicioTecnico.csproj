@@ -137,6 +137,12 @@
     <Compile Include="Controls\FrmWaitForm.Designer.cs">
       <DependentUpon>FrmWaitForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmGarantia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGarantia.Designer.cs">
+      <DependentUpon>FrmGarantia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201902280328476_InitMigration.cs" />
     <Compile Include="Migrations\201902280328476_InitMigration.Designer.cs">
       <DependentUpon>201902280328476_InitMigration.cs</DependentUpon>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\FrmWaitForm.resx">
       <DependentUpon>FrmWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmGarantia.resx">
+      <DependentUpon>FrmGarantia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902280328476_InitMigration.resx">
       <DependentUpon>201902280328476_InitMigration.cs</DependentUpon>
