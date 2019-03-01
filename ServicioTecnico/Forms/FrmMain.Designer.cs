@@ -28,125 +28,208 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStripMain = new System.Windows.Forms.MenuStrip();
-            this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configuracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.formulariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparatorSistema = new System.Windows.Forms.ToolStripSeparator();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acercaDelProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.soporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mercaderiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStripMain.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.applicationMenuMain = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
+            this.barManagerMain = new DevExpress.XtraBars.BarManager(this.components);
+            this.barMain = new DevExpress.XtraBars.Bar();
+            this.barSubItemSistema = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItemConfiguracion = new DevExpress.XtraBars.BarButtonItem();
+            this.barMdiChildrenListItemForms = new DevExpress.XtraBars.BarMdiChildrenListItem();
+            this.barButtonItemSalir = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItemRegistrar = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItemEquipo = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemGarantia = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemInventario = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItemConsultar = new DevExpress.XtraBars.BarSubItem();
+            this.barSubItemAyuda = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItemAboutMe = new DevExpress.XtraBars.BarButtonItem();
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            ((System.ComponentModel.ISupportInitialize)(this.applicationMenuMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManagerMain)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStripMain
+            // applicationMenuMain
             // 
-            this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sistemaToolStripMenuItem,
-            this.registrarToolStripMenuItem,
-            this.consultarToolStripMenuItem,
-            this.ayudaToolStripMenuItem});
-            this.menuStripMain.Location = new System.Drawing.Point(0, 0);
-            this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(801, 24);
-            this.menuStripMain.TabIndex = 1;
-            this.menuStripMain.Text = "menuStripMain";
+            this.applicationMenuMain.Name = "applicationMenuMain";
             // 
-            // sistemaToolStripMenuItem
+            // barManagerMain
             // 
-            this.sistemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configuracionToolStripMenuItem,
-            this.formulariosToolStripMenuItem,
-            this.toolStripSeparatorSistema,
-            this.salirToolStripMenuItem});
-            this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
-            this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.sistemaToolStripMenuItem.Text = "Sistema";
+            this.barManagerMain.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.barMain});
+            this.barManagerMain.DockControls.Add(this.barDockControlTop);
+            this.barManagerMain.DockControls.Add(this.barDockControlBottom);
+            this.barManagerMain.DockControls.Add(this.barDockControlLeft);
+            this.barManagerMain.DockControls.Add(this.barDockControlRight);
+            this.barManagerMain.Form = this;
+            this.barManagerMain.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barSubItemSistema,
+            this.barButtonItemConfiguracion,
+            this.barMdiChildrenListItemForms,
+            this.barButtonItemSalir,
+            this.barSubItemRegistrar,
+            this.barButtonItemEquipo,
+            this.barButtonItemGarantia,
+            this.barButtonItemInventario,
+            this.barSubItemConsultar,
+            this.barSubItemAyuda,
+            this.barButtonItemAboutMe});
+            this.barManagerMain.MainMenu = this.barMain;
+            this.barManagerMain.MaxItemId = 11;
             // 
-            // configuracionToolStripMenuItem
+            // barMain
             // 
-            this.configuracionToolStripMenuItem.Name = "configuracionToolStripMenuItem";
-            this.configuracionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.configuracionToolStripMenuItem.Text = "Configuración";
+            this.barMain.BarName = "BarMain";
+            this.barMain.CanDockStyle = ((DevExpress.XtraBars.BarCanDockStyle)(((((DevExpress.XtraBars.BarCanDockStyle.Left | DevExpress.XtraBars.BarCanDockStyle.Top) 
+            | DevExpress.XtraBars.BarCanDockStyle.Right) 
+            | DevExpress.XtraBars.BarCanDockStyle.Bottom) 
+            | DevExpress.XtraBars.BarCanDockStyle.Standalone)));
+            this.barMain.DockCol = 0;
+            this.barMain.DockRow = 0;
+            this.barMain.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.barMain.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItemSistema),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItemRegistrar),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItemConsultar),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItemAyuda)});
+            this.barMain.OptionsBar.AllowQuickCustomization = false;
+            this.barMain.OptionsBar.DisableClose = true;
+            this.barMain.OptionsBar.DisableCustomization = true;
+            this.barMain.OptionsBar.MultiLine = true;
+            this.barMain.OptionsBar.UseWholeRow = true;
+            this.barMain.Text = "Menu principal";
             // 
-            // formulariosToolStripMenuItem
+            // barSubItemSistema
             // 
-            this.formulariosToolStripMenuItem.Name = "formulariosToolStripMenuItem";
-            this.formulariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.formulariosToolStripMenuItem.Text = "Formularios";
+            this.barSubItemSistema.Caption = "Sistema";
+            this.barSubItemSistema.Id = 0;
+            this.barSubItemSistema.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemConfiguracion),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barMdiChildrenListItemForms),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemSalir)});
+            this.barSubItemSistema.Name = "barSubItemSistema";
             // 
-            // toolStripSeparatorSistema
+            // barButtonItemConfiguracion
             // 
-            this.toolStripSeparatorSistema.Name = "toolStripSeparatorSistema";
-            this.toolStripSeparatorSistema.Size = new System.Drawing.Size(149, 6);
+            this.barButtonItemConfiguracion.Caption = "Configuración";
+            this.barButtonItemConfiguracion.Id = 1;
+            this.barButtonItemConfiguracion.Name = "barButtonItemConfiguracion";
             // 
-            // salirToolStripMenuItem
+            // barMdiChildrenListItemForms
             // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            this.barMdiChildrenListItemForms.Caption = "Formularios";
+            this.barMdiChildrenListItemForms.Id = 2;
+            this.barMdiChildrenListItemForms.Name = "barMdiChildrenListItemForms";
             // 
-            // registrarToolStripMenuItem
+            // barButtonItemSalir
             // 
-            this.registrarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.soporteToolStripMenuItem,
-            this.mercaderiaToolStripMenuItem});
-            this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.registrarToolStripMenuItem.Text = "Registrar";
+            this.barButtonItemSalir.Caption = "Salir";
+            this.barButtonItemSalir.Id = 3;
+            this.barButtonItemSalir.Name = "barButtonItemSalir";
+            this.barButtonItemSalir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemSalir_ItemClick);
             // 
-            // consultarToolStripMenuItem
+            // barSubItemRegistrar
             // 
-            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.consultarToolStripMenuItem.Text = "Consultar";
+            this.barSubItemRegistrar.Caption = "Registrar";
+            this.barSubItemRegistrar.Id = 4;
+            this.barSubItemRegistrar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemEquipo),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemGarantia),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemInventario)});
+            this.barSubItemRegistrar.Name = "barSubItemRegistrar";
             // 
-            // ayudaToolStripMenuItem
+            // barButtonItemEquipo
             // 
-            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.acercaDelProductoToolStripMenuItem});
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            this.barButtonItemEquipo.Caption = "Equipo";
+            this.barButtonItemEquipo.Id = 5;
+            this.barButtonItemEquipo.Name = "barButtonItemEquipo";
+            this.barButtonItemEquipo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemEquipo_ItemClick);
             // 
-            // acercaDelProductoToolStripMenuItem
+            // barButtonItemGarantia
             // 
-            this.acercaDelProductoToolStripMenuItem.Name = "acercaDelProductoToolStripMenuItem";
-            this.acercaDelProductoToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.acercaDelProductoToolStripMenuItem.Text = "Acerca del producto";
-            this.acercaDelProductoToolStripMenuItem.Click += new System.EventHandler(this.acercaDelProductoToolStripMenuItem_Click);
+            this.barButtonItemGarantia.Caption = "Garantía";
+            this.barButtonItemGarantia.Id = 6;
+            this.barButtonItemGarantia.Name = "barButtonItemGarantia";
             // 
-            // soporteToolStripMenuItem
+            // barButtonItemInventario
             // 
-            this.soporteToolStripMenuItem.Name = "soporteToolStripMenuItem";
-            this.soporteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.soporteToolStripMenuItem.Text = "Soporte";
-            this.soporteToolStripMenuItem.Click += new System.EventHandler(this.soporteToolStripMenuItem_Click);
+            this.barButtonItemInventario.Caption = "Inventario";
+            this.barButtonItemInventario.Id = 7;
+            this.barButtonItemInventario.Name = "barButtonItemInventario";
+            this.barButtonItemInventario.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemInventario_ItemClick);
             // 
-            // mercaderiaToolStripMenuItem
+            // barSubItemConsultar
             // 
-            this.mercaderiaToolStripMenuItem.Name = "mercaderiaToolStripMenuItem";
-            this.mercaderiaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.mercaderiaToolStripMenuItem.Text = "Mercadería";
-            this.mercaderiaToolStripMenuItem.Click += new System.EventHandler(this.mercaderiaToolStripMenuItem_Click);
+            this.barSubItemConsultar.Caption = "Consultar";
+            this.barSubItemConsultar.Id = 8;
+            this.barSubItemConsultar.Name = "barSubItemConsultar";
+            // 
+            // barSubItemAyuda
+            // 
+            this.barSubItemAyuda.Caption = "Ayuda";
+            this.barSubItemAyuda.Id = 9;
+            this.barSubItemAyuda.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemAboutMe)});
+            this.barSubItemAyuda.Name = "barSubItemAyuda";
+            // 
+            // barButtonItemAboutMe
+            // 
+            this.barButtonItemAboutMe.Caption = "Acerca del producto";
+            this.barButtonItemAboutMe.Id = 10;
+            this.barButtonItemAboutMe.Name = "barButtonItemAboutMe";
+            this.barButtonItemAboutMe.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemAboutMe_ItemClick);
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManagerMain;
+            this.barDockControlTop.Size = new System.Drawing.Size(874, 22);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 436);
+            this.barDockControlBottom.Manager = this.barManagerMain;
+            this.barDockControlBottom.Size = new System.Drawing.Size(874, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 22);
+            this.barDockControlLeft.Manager = this.barManagerMain;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 414);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(874, 22);
+            this.barDockControlRight.Manager = this.barManagerMain;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 414);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 545);
-            this.Controls.Add(this.menuStripMain);
+            this.ClientSize = new System.Drawing.Size(874, 436);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStripMain;
             this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de servicio técnico";
-            this.menuStripMain.ResumeLayout(false);
-            this.menuStripMain.PerformLayout();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmMain_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.applicationMenuMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManagerMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,17 +237,23 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStripMain;
-        private System.Windows.Forms.ToolStripMenuItem sistemaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem formulariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparatorSistema;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem configuracionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem acercaDelProductoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem soporteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mercaderiaToolStripMenuItem;
+        private DevExpress.XtraBars.Ribbon.ApplicationMenu applicationMenuMain;
+        private DevExpress.XtraBars.BarManager barManagerMain;
+        private DevExpress.XtraBars.Bar barMain;
+        private DevExpress.XtraBars.BarSubItem barSubItemSistema;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemConfiguracion;
+        private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItemForms;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemSalir;
+        private DevExpress.XtraBars.BarSubItem barSubItemRegistrar;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemEquipo;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemGarantia;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemInventario;
+        private DevExpress.XtraBars.BarSubItem barSubItemConsultar;
+        private DevExpress.XtraBars.BarSubItem barSubItemAyuda;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemAboutMe;
     }
 }
