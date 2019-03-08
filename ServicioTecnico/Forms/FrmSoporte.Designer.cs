@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 430);
             this.Name = "FrmSoporte";
-            this.Text = "FrmSoporte";
+            this.Text = "Soporte de pc\'s";
             this.Load += new System.EventHandler(this.FrmSoporte_Load);
             this.ResumeLayout(false);
 

@@ -52,8 +52,6 @@ namespace ServicioTecnico
         private void barButtonItemEquipo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.splashScreenManagerWait.ShowWaitForm();
-
-
             bool existe = ExisteHijo(typeof(FrmSoporte));
             if (existe)
             {
@@ -62,23 +60,13 @@ namespace ServicioTecnico
             }
             FrmSoporte frm = new FrmSoporte();
             frm.MdiParent = this;
-            //SplashScreenManager.ShowForm(this, typeof(FrmWaitForm), true, true,false);
-            //SplashScreenManager.Default.SetWaitFormCaption("Cargando..........");
-            //SplashScreenManager.Default.SetWaitFormDescription("Espera..........");
-            //this.splashScreenManagerWait.ShowWaitForm();
             frm.Show();
-            //this.splashScreenManagerWait.CloseWaitForm();
-            //SplashScreenManager.CloseDefaultWaitForm();
-            //SplashScreenManager.CloseForm();
-
             this.splashScreenManagerWait.CloseWaitForm();
         }
         
         private void barButtonItemInventario_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.splashScreenManagerWait.ShowWaitForm();
-
-
             bool existe = ExisteHijo(typeof(FrmMercaderia));
             if (existe)
             {
@@ -87,23 +75,13 @@ namespace ServicioTecnico
             }
             FrmMercaderia frm = new FrmMercaderia();
             frm.MdiParent = this;
-            //SplashScreenManager.ShowForm(this, typeof(FrmWaitForm), true, true, false);
-            //SplashScreenManager.Default.SetWaitFormCaption("Cargando..........");
-            //SplashScreenManager.Default.SetWaitFormDescription("Espera..........");
-            //this.splashScreenManagerWait.ShowWaitForm();
             frm.Show();
-            //this.splashScreenManagerWait.CloseWaitForm();
-            //SplashScreenManager.CloseDefaultWaitForm();
-            //SplashScreenManager.CloseForm();
-
             this.splashScreenManagerWait.CloseWaitForm();
         }
 
         private void barButtonItemGarantia_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.splashScreenManagerWait.ShowWaitForm();
-
-
             bool existe = ExisteHijo(typeof(FrmGarantia));
             if (existe)
             {
@@ -112,15 +90,7 @@ namespace ServicioTecnico
             }
             FrmGarantia frm = new FrmGarantia();
             frm.MdiParent = this;
-            //SplashScreenManager.ShowForm(this, typeof(FrmWaitForm), true, true, false);
-            //SplashScreenManager.Default.SetWaitFormCaption("Cargando..........");
-            //SplashScreenManager.Default.SetWaitFormDescription("Espera..........");
-            //this.splashScreenManagerWait.ShowWaitForm();
             frm.Show();
-            //this.splashScreenManagerWait.CloseWaitForm();
-            //SplashScreenManager.CloseDefaultWaitForm();
-            //SplashScreenManager.CloseForm();
-
             this.splashScreenManagerWait.CloseWaitForm();
         }
     }

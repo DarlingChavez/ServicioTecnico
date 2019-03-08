@@ -20,7 +20,26 @@ namespace ServicioTecnico
 
         private void FrmSoporte_Load(object sender, EventArgs e)
         {
-            
+            try
+            {
+                CargarMarcas();
+                CargarProcesadores();
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
         }
+
+        private void CargarMarcas()
+        {
+
+        }
+
+        private void CargarProcesadores()
+        {
+
+        }
+
     }
 }

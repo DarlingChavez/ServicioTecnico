@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 377);
             this.Name = "FrmGarantia";
-            this.Text = "FrmGarantia";
+            this.Text = "Soporte por garantía";
             this.ResumeLayout(false);
 
         }
