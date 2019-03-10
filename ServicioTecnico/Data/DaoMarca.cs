@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ServicioTecnico
 {
-    public class DaoMarca
+    public class DaoMarca : IDisposable
     {
         private BaseRepository<Marca> repository;
         private DbContext context;
@@ -16,6 +16,12 @@ namespace ServicioTecnico
         {
             context = new BaseContext();
             repository = new BaseRepository<Marca>(context);
+        }
+
+        public void Dispose()
+        {
+            repository.Dispose();
+            context.Dispose();
         }
 
         public Marca Get(int id)

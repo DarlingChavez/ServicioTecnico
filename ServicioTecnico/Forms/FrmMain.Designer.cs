@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManagerSplash = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::ServicioTecnico.SplashScreenMain), true, true);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.applicationMenuMain = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.barManagerMain = new DevExpress.XtraBars.BarManager(this.components);
             this.barMain = new DevExpress.XtraBars.Bar();
@@ -99,6 +100,7 @@
             this.barMain.DockCol = 0;
             this.barMain.DockRow = 0;
             this.barMain.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.barMain.FloatLocation = new System.Drawing.Point(76, 191);
             this.barMain.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItemSistema),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItemRegistrar),
@@ -107,6 +109,8 @@
             this.barMain.OptionsBar.AllowQuickCustomization = false;
             this.barMain.OptionsBar.DisableClose = true;
             this.barMain.OptionsBar.DisableCustomization = true;
+            this.barMain.OptionsBar.DrawBorder = false;
+            this.barMain.OptionsBar.DrawDragBorder = false;
             this.barMain.OptionsBar.MultiLine = true;
             this.barMain.OptionsBar.UseWholeRow = true;
             this.barMain.Text = "Menu principal";
@@ -137,6 +141,8 @@
             // 
             this.barButtonItemSalir.Caption = "Salir";
             this.barButtonItemSalir.Id = 3;
+            this.barButtonItemSalir.ImageOptions.Image = global::ServicioTecnico.Properties.Resources.close_16x16;
+            this.barButtonItemSalir.ImageOptions.LargeImage = global::ServicioTecnico.Properties.Resources.close_32x322;
             this.barButtonItemSalir.Name = "barButtonItemSalir";
             this.barButtonItemSalir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemSalir_ItemClick);
             // 
@@ -154,6 +160,7 @@
             // 
             this.barButtonItemEquipo.Caption = "Equipo";
             this.barButtonItemEquipo.Id = 5;
+            this.barButtonItemEquipo.ImageOptions.Image = global::ServicioTecnico.Properties.Resources.servermode_32x32;
             this.barButtonItemEquipo.Name = "barButtonItemEquipo";
             this.barButtonItemEquipo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemEquipo_ItemClick);
             // 
@@ -161,6 +168,7 @@
             // 
             this.barButtonItemGarantia.Caption = "Garantía";
             this.barButtonItemGarantia.Id = 6;
+            this.barButtonItemGarantia.ImageOptions.Image = global::ServicioTecnico.Properties.Resources.formatwraptext_32x32;
             this.barButtonItemGarantia.Name = "barButtonItemGarantia";
             this.barButtonItemGarantia.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemGarantia_ItemClick);
             // 
@@ -245,7 +253,9 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.MinimumSize = new System.Drawing.Size(888, 469);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de servicio técnico";

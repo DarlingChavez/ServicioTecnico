@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ServicioTecnico
 {
-    public class BaseRepository<T> where T : class
+    public class BaseRepository<T> : IDisposable where T : class
     {
 
         private DbContext _dbContext;
@@ -53,6 +53,11 @@ namespace ServicioTecnico
             int rows = _dbContext.SaveChanges();
             afected = rows > 0;
             return afected;
+        }
+
+        public void Dispose()
+        {
+            _dbContext.Dispose();
         }
     }
 }

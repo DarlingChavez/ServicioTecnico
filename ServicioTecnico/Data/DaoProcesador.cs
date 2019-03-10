@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ServicioTecnico
 {
-    public class DaoProcesador
+    public class DaoProcesador : IDisposable
     {
         private BaseRepository<Procesador> repository;
         private DbContext context;
@@ -18,13 +18,19 @@ namespace ServicioTecnico
             repository = new BaseRepository<Procesador>(context);
         }
 
+        public void Dispose()
+        {
+            repository.Dispose();
+            context.Dispose();
+        }
+
         public Procesador Get(int id)
         {
             var entity = repository.Get(id);
             return entity;
         }
 
-        public List<Procesador> GetMotivosCierre()
+        public List<Procesador> GetProcesadores()
         {
             var query = repository.GetAll().Where(e => e.EstadoRegistro == General.Estados.Activo);
             var list = query.ToList();
